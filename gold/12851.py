@@ -10,7 +10,6 @@ q = deque()
 q.append(S)
 while q:
     now = q.popleft()
-    # print(now)
     if now == E:
         cnt += 1
         continue
