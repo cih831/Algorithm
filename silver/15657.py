@@ -9,6 +9,5 @@ def recur(idx, ans):
 N, M = map(int, input().split())
 arr = list(map(int, input().split()))
 arr.sort()
-print(arr)
 for i in range(N):
     recur(i, [arr[i]])
