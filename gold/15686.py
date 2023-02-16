@@ -1,5 +1,5 @@
 def rank():
-    global home, chicken, tmp
+    global home, chicken
     for h in range(len(home)):
         for c in range(len(chicken)):
             d = abs(home[h][0] - chicken[c][0]) + abs(home[h][1] - chicken[c][1])
