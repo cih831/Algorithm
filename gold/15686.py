@@ -3,6 +3,7 @@ arr = [list(map(int, input().split())) for _ in range(N)]
 chicken = []
 home = []
 
+
 # def rank():
 #     global home, chicken
 #     for h in range(len(home)):
