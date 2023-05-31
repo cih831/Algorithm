@@ -9,7 +9,7 @@ def solution(m, n, board):
             for j in range(n - 1):
                 if graph[i][j] and graph[i][j] == graph[i + 1][j] == graph[i][j + 1] == graph[i + 1][j + 1]:
                     del_lst |= {(i, j), (i + 1, j), (i, j + 1), (i + 1, j + 1)}
-        
+
         for i in range(m, -1, -1):
             for j in range(n):
                 if (i, j) in del_lst:
