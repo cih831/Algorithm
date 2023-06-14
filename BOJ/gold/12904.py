@@ -20,7 +20,6 @@ while 0 <= s <= e and e - s >= S_len - 1:
 
 print(ans)
 
-
 # import sys
 # from collections import deque
 # input = sys.stdin.readline
