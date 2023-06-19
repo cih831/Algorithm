@@ -11,7 +11,7 @@ def solution(numbers):
     return answer
 
 print(solution([
-    2, 7
+    x for x in range(3, 1000, 8)
 ]))
 
 # 1 - 4

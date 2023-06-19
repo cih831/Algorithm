@@ -34,3 +34,11 @@ print(solution(
      ["OOOXX", "XOOOX", "OOOXX", "OXOOX", "OOOOO"],
      ["PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"]]
 ))
+
+"""
+["POOOP"
+ "OXXOX"
+ "OPXPX"
+ "OOXOX"
+ "POXXP"]
+"""
