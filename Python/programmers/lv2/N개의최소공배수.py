@@ -1,5 +1,4 @@
 def solution(arr):
-    answer = 1
     def div(num):
         lst = []
         d = 2
@@ -13,8 +12,12 @@ def solution(arr):
             else:
                 d += 1
         return lst
+    
+    answer = 1
+
     for i in range(len(arr)):
         arr[i] = div(arr[i])
+
     for i in range(len(arr)):
         for _ in range(len(arr[i])):
             tmp = arr[i][0]
@@ -22,6 +25,7 @@ def solution(arr):
             for lst in arr:
                 if tmp in lst:
                     lst.remove(tmp)
+                    
     return answer
 
 print(solution([2,6,8,14]))
