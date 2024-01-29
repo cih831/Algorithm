@@ -1,20 +1,21 @@
 import sys
 
-N, M = map(int, sys.stdin.readline().split())
-E = sorted([list(map(int, sys.stdin.readline().split())) for _ in range(M)])
+input = sys.stdin.readline
+
+N, M = map(int, input().split())
+E = sorted([sorted(list(map(int, input().split()))) for _ in range(M)])
 pn = [n for n in range(N + 1)]
 
 for item in E:
     if pn[item[0]] < pn[item[1]]:
-        p = pn[pn[item[1]]]
         pn[item[1]] = pn[item[0]]
-        while p != pn[item[0]]:
-            pn[p], p = pn[item[0]], pn[p]
     else:
-        p = pn[pn[item[0]]]
         pn[item[0]] = pn[item[1]]
-        while p != pn[item[1]]:
-            pn[p], p = pn[item[1]], pn[p]
 
+for item in E[::-1]:
+    if pn[item[0]] < pn[item[1]]:
+        pn[item[1]] = pn[item[0]]
+    else:
+        pn[item[0]] = pn[item[1]]
 
 print(len(set(pn[1:])))
